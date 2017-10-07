@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="8.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -341,14 +342,26 @@
 <sheets>
 <sheet>
 <plain>
-<text x="7.62" y="6.858" size="1.778" layer="94">SKU: BUTTON2</text>
-<text x="7.62" y="12.7" size="2.794" layer="94">SuperHouse Automation Button Board 2</text>
-<text x="81.28" y="6.858" size="1.778" layer="94">V1.0 (2014-07-12)</text>
-<text x="35.306" y="6.858" size="1.778" layer="94">www.superhouse.tv/button2</text>
 <frame x1="0" y1="0" x2="248.92" y2="185.42" columns="8" rows="5" layer="94"/>
-<frame x1="5.08" y1="5.08" x2="109.22" y2="17.78" columns="0" rows="0" layer="94" border-left="no" border-top="no" border-right="no" border-bottom="no"/>
-<frame x1="78.74" y1="5.08" x2="109.22" y2="10.16" columns="8" rows="5" layer="94"/>
-<frame x1="5.08" y1="5.08" x2="30.48" y2="10.16" columns="8" rows="5" layer="94"/>
+<text x="139.7" y="20.32" size="3.048" layer="94">Home Automation Light Switch (2 Button)</text>
+<text x="165.1" y="14.478" size="1.778" layer="94">V1.0 (2014-07-12)</text>
+<text x="139.7" y="14.478" size="1.778" layer="94">SKU: SWITCH2</text>
+<text x="139.446" y="9.398" size="1.778" layer="94">(C)2014 SuperHouse Automation Pty Ltd: www.superhouse.tv</text>
+<text x="139.446" y="6.35" size="1.778" layer="94">Released under the TAPR Open Hardware License: www.tapr.org/ohl</text>
+<text x="195.326" y="14.478" size="1.778" layer="94">www.superhouse.tv/lightswitch</text>
+<frame x1="137.16" y1="12.7" x2="243.84" y2="25.4" columns="0" rows="0" layer="94" border-left="no" border-top="no" border-right="no" border-bottom="no"/>
+<frame x1="162.56" y1="12.7" x2="193.04" y2="17.78" columns="8" rows="5" layer="94"/>
+<frame x1="137.16" y1="5.08" x2="243.84" y2="17.78" columns="0" rows="0" layer="94" border-left="no" border-top="no" border-right="no" border-bottom="no"/>
+<text x="48.26" y="121.92" size="1.778" layer="97">DATA 1</text>
+<text x="48.26" y="119.38" size="1.778" layer="97">DATA 2</text>
+<text x="48.26" y="116.84" size="1.778" layer="97">DATA 3</text>
+<text x="48.26" y="109.22" size="1.778" layer="97">DATA 4</text>
+<text x="48.26" y="114.3" size="1.778" layer="97">+12V</text>
+<text x="48.26" y="111.76" size="1.778" layer="97">+12V</text>
+<text x="48.26" y="106.68" size="1.778" layer="97">GND</text>
+<text x="48.26" y="104.14" size="1.778" layer="97">GND</text>
+<text x="50.8" y="76.2" size="1.778" layer="97">Note: Buttons have built-in current limiting
+resistors on the LEDs, not shown here</text>
 </plain>
 <instances>
 <instance part="GND3" gate="1" x="116.84" y="88.9"/>
@@ -431,4 +444,10 @@
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
