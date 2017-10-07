@@ -1,5 +1,5 @@
-Home Automation Light Switches
-===============================
+Home Automation Light Switch (2 Button)
+========================================
 Copyright 2014 SuperHouse Automation Pty Ltd  
 SuperHouse site:  <www.superhouse.tv>  
 
