@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.7.0">
+<eagle version="9.0.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
@@ -189,7 +189,8 @@
 </library>
 <library name="freetronics-jon">
 <packages>
-<package name="RJ45">
+<package name="RJ45CH">
+<description>Chinese version</description>
 <wire x1="7.5" y1="-10" x2="7.5" y2="-6" width="0.2032" layer="51"/>
 <wire x1="7.5" y1="-6" x2="7.5" y2="7" width="0.2032" layer="21"/>
 <wire x1="7.5" y1="7" x2="-7.5" y2="7" width="0.2032" layer="21"/>
@@ -197,18 +198,18 @@
 <wire x1="-7.5" y1="-6" x2="-7.5" y2="-10" width="0.2032" layer="51"/>
 <wire x1="7.5" y1="-10" x2="-7.5" y2="-10" width="0.2032" layer="51"/>
 <pad name="1" x="3.5" y="2.3" drill="0.8" diameter="1.4224"/>
-<pad name="2" x="2.5" y="4.84" drill="0.8" diameter="1.4224"/>
+<pad name="2" x="2.5" y="5.08" drill="0.8" diameter="1.4224"/>
 <pad name="3" x="1.5" y="2.3" drill="0.8" diameter="1.4224"/>
-<pad name="4" x="0.5" y="4.84" drill="0.8" diameter="1.4224"/>
+<pad name="4" x="0.5" y="5.08" drill="0.8" diameter="1.4224"/>
 <pad name="5" x="-0.5" y="2.3" drill="0.8" diameter="1.4224"/>
-<pad name="6" x="-1.5" y="4.84" drill="0.8" diameter="1.4224"/>
+<pad name="6" x="-1.5" y="5.08" drill="0.8" diameter="1.4224"/>
 <hole x="-7.5" y="0" drill="2.4"/>
 <hole x="7.5" y="0" drill="2.4"/>
 <text x="-2.54" y="-1.65" size="0.8128" layer="25">&gt;NAME</text>
 <text x="-2.54" y="-2.92" size="0.8128" layer="27">&gt;VALUE</text>
 <wire x1="7.5" y1="-6" x2="-7.5" y2="-6" width="0.2032" layer="21"/>
 <pad name="7" x="-2.5" y="2.3" drill="0.8" diameter="1.4224"/>
-<pad name="8" x="-3.5" y="4.84" drill="0.8" diameter="1.4224"/>
+<pad name="8" x="-3.5" y="5.08" drill="0.8" diameter="1.4224"/>
 </package>
 <package name="SWITCH-SPST-ILLUMINATED">
 <pad name="4" x="0" y="-5" drill="1" diameter="1.778" shape="long"/>
@@ -410,6 +411,28 @@ type 0309, grid 2.5 mm</description>
 <rectangle x1="0.0508" y1="-0.3048" x2="0.635" y2="0.3048" layer="21"/>
 <rectangle x1="0.3048" y1="-0.3048" x2="0.889" y2="0.3048" layer="21"/>
 </package>
+<package name="RJ45">
+<description>Jaycar version</description>
+<wire x1="7.5" y1="-10" x2="7.5" y2="-6" width="0.2032" layer="51"/>
+<wire x1="7.5" y1="-6" x2="7.5" y2="7" width="0.2032" layer="21"/>
+<wire x1="7.5" y1="7" x2="-7.5" y2="7" width="0.2032" layer="21"/>
+<wire x1="-7.5" y1="7" x2="-7.5" y2="-6" width="0.2032" layer="21"/>
+<wire x1="-7.5" y1="-6" x2="-7.5" y2="-10" width="0.2032" layer="51"/>
+<wire x1="7.5" y1="-10" x2="-7.5" y2="-10" width="0.2032" layer="51"/>
+<pad name="1" x="3.5" y="2.3" drill="0.8" diameter="1.4224"/>
+<pad name="2" x="2.5" y="4.84" drill="0.8" diameter="1.4224"/>
+<pad name="3" x="1.5" y="2.3" drill="0.8" diameter="1.4224"/>
+<pad name="4" x="0.5" y="4.84" drill="0.8" diameter="1.4224"/>
+<pad name="5" x="-0.5" y="2.3" drill="0.8" diameter="1.4224"/>
+<pad name="6" x="-1.5" y="4.84" drill="0.8" diameter="1.4224"/>
+<hole x="-7.5" y="0" drill="2.4"/>
+<hole x="7.5" y="0" drill="2.4"/>
+<text x="-2.54" y="-1.65" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-2.92" size="0.8128" layer="27">&gt;VALUE</text>
+<wire x1="7.5" y1="-6" x2="-7.5" y2="-6" width="0.2032" layer="21"/>
+<pad name="7" x="-2.5" y="2.3" drill="0.8" diameter="1.4224"/>
+<pad name="8" x="-3.5" y="4.84" drill="0.8" diameter="1.4224"/>
+</package>
 </packages>
 <symbols>
 <symbol name="M08">
@@ -493,7 +516,22 @@ type 0309, grid 2.5 mm</description>
 <gate name="G$1" symbol="M08" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="RJ45">
+<device name="JC" package="RJ45">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="CH" package="RJ45CH">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -651,7 +689,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 </classes>
 <parts>
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
-<part name="S1" library="freetronics-jon" deviceset="RJ45" device=""/>
+<part name="S1" library="freetronics-jon" deviceset="RJ45" device="CH"/>
 <part name="SW1" library="freetronics-jon" deviceset="SWITCH-SPST-ILLUMINATED" device=""/>
 <part name="SW2" library="freetronics-jon" deviceset="SWITCH-SPST-ILLUMINATED" device=""/>
 <part name="R1" library="freetronics-jon" deviceset="RESISTOR" device="0603" value="4K7"/>
@@ -662,7 +700,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <plain>
 <frame x1="0" y1="0" x2="248.92" y2="185.42" columns="8" rows="5" layer="94"/>
 <text x="139.7" y="20.32" size="3.048" layer="94">Home Automation Light Switch (2 Button)</text>
-<text x="165.1" y="14.478" size="1.778" layer="94">V2.2 (2018-04-05)</text>
+<text x="165.1" y="14.478" size="1.778" layer="94">V2.3 (2018-04-30)</text>
 <text x="139.7" y="14.478" size="1.778" layer="94">SKU: SWITCH2</text>
 <text x="139.446" y="9.398" size="1.778" layer="94">(C)2017-2018 SuperHouse Automation Pty Ltd: www.superhouse.tv</text>
 <text x="139.446" y="6.35" size="1.778" layer="94">Released under the TAPR Open Hardware License: www.tapr.org/ohl</text>

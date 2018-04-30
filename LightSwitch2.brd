@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.7.0">
+<eagle version="9.0.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
@@ -166,7 +166,7 @@
 <wire x1="0" y1="44" x2="22" y2="44" width="0" layer="20"/>
 <wire x1="22" y1="44" x2="22" y2="0" width="0" layer="20"/>
 <text x="21" y="3" size="1.1176" layer="21" font="vector" ratio="15" rot="R90">(C)2017 SuperHouse Automation Pty Ltd</text>
-<text x="17.4452" y="41.8486" size="0.9144" layer="21" font="vector" ratio="15">v2.2</text>
+<text x="17.4452" y="41.8486" size="0.9144" layer="21" font="vector" ratio="15">v2.3</text>
 <text x="10.8412" y="14.8646" size="1.27" layer="21" font="vector" ratio="15" distance="15" align="center">Light Switch
 2-Button</text>
 <text x="2" y="2" size="1.6764" layer="21" font="vector" ratio="15" rot="R90">www.superhouse.tv/lightswitch</text>
@@ -181,7 +181,8 @@
 <libraries>
 <library name="freetronics-jon">
 <packages>
-<package name="RJ45">
+<package name="RJ45CH">
+<description>Chinese version</description>
 <wire x1="7.5" y1="-10" x2="7.5" y2="-6" width="0.2032" layer="51"/>
 <wire x1="7.5" y1="-6" x2="7.5" y2="7" width="0.2032" layer="21"/>
 <wire x1="7.5" y1="7" x2="-7.5" y2="7" width="0.2032" layer="21"/>
@@ -189,18 +190,18 @@
 <wire x1="-7.5" y1="-6" x2="-7.5" y2="-10" width="0.2032" layer="51"/>
 <wire x1="7.5" y1="-10" x2="-7.5" y2="-10" width="0.2032" layer="51"/>
 <pad name="1" x="3.5" y="2.3" drill="0.8" diameter="1.4224"/>
-<pad name="2" x="2.5" y="4.84" drill="0.8" diameter="1.4224"/>
+<pad name="2" x="2.5" y="5.08" drill="0.8" diameter="1.4224"/>
 <pad name="3" x="1.5" y="2.3" drill="0.8" diameter="1.4224"/>
-<pad name="4" x="0.5" y="4.84" drill="0.8" diameter="1.4224"/>
+<pad name="4" x="0.5" y="5.08" drill="0.8" diameter="1.4224"/>
 <pad name="5" x="-0.5" y="2.3" drill="0.8" diameter="1.4224"/>
-<pad name="6" x="-1.5" y="4.84" drill="0.8" diameter="1.4224"/>
+<pad name="6" x="-1.5" y="5.08" drill="0.8" diameter="1.4224"/>
 <hole x="-7.5" y="0" drill="2.4"/>
 <hole x="7.5" y="0" drill="2.4"/>
 <text x="-2.54" y="-1.65" size="0.8128" layer="25">&gt;NAME</text>
 <text x="-2.54" y="-2.92" size="0.8128" layer="27">&gt;VALUE</text>
 <wire x1="7.5" y1="-6" x2="-7.5" y2="-6" width="0.2032" layer="21"/>
 <pad name="7" x="-2.5" y="2.3" drill="0.8" diameter="1.4224"/>
-<pad name="8" x="-3.5" y="4.84" drill="0.8" diameter="1.4224"/>
+<pad name="8" x="-3.5" y="5.08" drill="0.8" diameter="1.4224"/>
 </package>
 <package name="SWITCH-SPST-ILLUMINATED">
 <pad name="4" x="0" y="-5" drill="1" diameter="1.778" shape="long"/>
@@ -449,7 +450,7 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="S1" library="freetronics-jon" package="RJ45" value="RJ45" x="11" y="25"/>
+<element name="S1" library="freetronics-jon" package="RJ45CH" value="RJ45CH" x="11" y="25"/>
 <element name="SW1" library="freetronics-jon" package="SWITCH-SPST-ILLUMINATED" value="SWITCH-SPST-ILLUMINATED" x="11" y="37" rot="MR50"/>
 <element name="SW2" library="freetronics-jon" package="SWITCH-SPST-ILLUMINATED" value="SWITCH-SPST-ILLUMINATED" x="11" y="7" rot="MR50"/>
 <element name="R1" library="freetronics-jon" package="0603" value="4K7" x="19" y="36" rot="R90"/>
@@ -481,7 +482,7 @@ design rules under a new name.</description>
 <signal name="+12V">
 <contactref element="S1" pad="5"/>
 <contactref element="S1" pad="4"/>
-<wire x1="10.5" y1="27.3" x2="11.5" y2="29.84" width="0.508" layer="16"/>
+<wire x1="10.5" y1="27.3" x2="11.5" y2="30.08" width="0.508" layer="16"/>
 <contactref element="R1" pad="1"/>
 <contactref element="R2" pad="1"/>
 <wire x1="19" y1="5.762" x2="19" y2="14" width="0.508" layer="1"/>
@@ -504,7 +505,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$5">
 <contactref element="S1" pad="2"/>
-<wire x1="13.5" y1="29.84" x2="13.5" y2="30.5" width="0.508" layer="1"/>
+<wire x1="13.5" y1="30.08" x2="13.5" y2="30.5" width="0.508" layer="1"/>
 <wire x1="5" y1="30" x2="5" y2="28" width="0.508" layer="1"/>
 <wire x1="5" y1="28" x2="7" y2="26" width="0.508" layer="1"/>
 <contactref element="SW2" pad="3"/>
